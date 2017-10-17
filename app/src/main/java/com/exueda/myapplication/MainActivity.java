@@ -14,7 +14,6 @@ import com.youth.banner.Banner;
 public class MainActivity extends AppCompatActivity {
 
     private final String TAG = "MainActivity";
-    private final String TAG2 = "H";
 
     BridgeWebView webView;
 
