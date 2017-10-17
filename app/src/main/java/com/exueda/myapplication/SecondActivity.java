@@ -12,6 +12,5 @@ public class SecondActivity extends Activity {
         setContentView(R.layout.activity_second);
 
 
-        Toast.makeText(this, "Bean.getZhi():" + Bean.getZhi(), Toast.LENGTH_SHORT).show();
     }
 }

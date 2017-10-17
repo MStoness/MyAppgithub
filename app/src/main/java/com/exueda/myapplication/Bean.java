@@ -4,28 +4,27 @@ package com.exueda.myapplication;
  * Created by exueda on 2017/9/8.
  */
 
-public class Bean implements HaListener{
+public class Bean {
 
-    public static int getZhi() {
+    public int num;
+
+    public String zhi;
+
+    public int getNum() {
+        return num;
+    }
+
+    public void setNum(int num) {
+        this.num = num;
+    }
+
+    public String getZhi() {
         return zhi;
     }
 
-    public static void setZhi(int zhi) {
-        Bean.zhi = zhi;
-    }
-
-    public static int zhi=10;
-
-
-
-    public HaListener getData(){
-
-        return null;
+    public void setZhi(String zhi) {
+        this.zhi = zhi;
     }
 
 
-    @Override
-    public void hh() {
-
-    }
 }
