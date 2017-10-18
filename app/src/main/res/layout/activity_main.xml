@@ -5,24 +5,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!-- button 演示Java调用web -->
     <Button
-        android:id="@+id/button"
+        android:id="@+id/simple_recyclerView"
+        style="@style/ThemeOverlay.AppCompat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Java调用Web"
-        tools:layout_editor_absoluteY="0dp"
+        android:text="simple_recyclerView"
         tools:layout_editor_absoluteX="8dp"
-        style="@style/ThemeOverlay.AppCompat"
-        android:visibility="gone"/>
-
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/reclycleView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </android.support.v7.widget.RecyclerView>
+        tools:layout_editor_absoluteY="0dp" />
 
 
 </LinearLayout>

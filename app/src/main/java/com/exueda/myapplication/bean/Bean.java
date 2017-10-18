@@ -1,4 +1,4 @@
-package com.exueda.myapplication;
+package com.exueda.myapplication.bean;
 
 /**
  * Created by exueda on 2017/9/8.

@@ -1,4 +1,4 @@
-package com.exueda.myapplication;
+package com.exueda.myapplication.bean;
 
 import android.app.Application;
 
