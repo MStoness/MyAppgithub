@@ -1,6 +1,7 @@
 package com.exueda.myapplication.adapter;
 
 import android.content.Context;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 
 
 import com.exueda.myapplication.R;
+import com.exueda.myapplication.listener.RecyclerOnItemClickListener;
 
 import java.util.List;
 
@@ -18,6 +20,12 @@ import java.util.List;
 
 public class BaseRecyclerAdapter extends RecyclerView.Adapter<BaseRecyclerAdapter.MyViewHolder> {
 
+
+    public void setRecyclerOnItemClickListener(RecyclerOnItemClickListener recyclerOnItemClickListener) {
+        this.recyclerOnItemClickListener = recyclerOnItemClickListener;
+    }
+
+    private RecyclerOnItemClickListener recyclerOnItemClickListener;
 
     private List<String> data;
 
@@ -41,6 +49,7 @@ public class BaseRecyclerAdapter extends RecyclerView.Adapter<BaseRecyclerAdapte
 
         String s = data.get(position);
         holder.textView.setText(s);
+
     }
 
     @Override
@@ -51,11 +60,26 @@ public class BaseRecyclerAdapter extends RecyclerView.Adapter<BaseRecyclerAdapte
     class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView textView;
+        CardView cardView;
 
         public MyViewHolder(View itemView) {
             super(itemView);
 
             textView = (TextView) itemView.findViewById(R.id.tv_num);
+            cardView = (CardView) itemView.findViewById(R.id.cardView);
+
+            cardView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    if (recyclerOnItemClickListener!=null){
+
+                        recyclerOnItemClickListener.onItemclick(view,getPosition());
+                    }
+                }
+            });
         }
     }
+
+
 }
