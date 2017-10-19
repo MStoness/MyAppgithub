@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private final String TAG = "MainActivity";
 
-    private Button simple_recyclerViewbtn;
+    private Button simple_recyclerViewbtn,cymChadBaseRecyclerView;
 
     private Context context;
 
@@ -33,7 +33,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void findId() {
 
         simple_recyclerViewbtn = (Button) findViewById(R.id.simple_recyclerView);
+        cymChadBaseRecyclerView = (Button) findViewById(R.id.CymChadBaseRecyclerView);
         simple_recyclerViewbtn.setOnClickListener(this);
+        cymChadBaseRecyclerView.setOnClickListener(this);
     }
 
 
@@ -46,6 +48,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 Intent intent = new Intent(context, RecyclerActivity.class);
                 startActivity(intent);
+
+
+                break;
+
+            case R.id.CymChadBaseRecyclerView:
+
+                Intent intent2 = new Intent(context, CymChadBaseRecyclerViewActivity.class);
+                startActivity(intent2);
 
 
                 break;

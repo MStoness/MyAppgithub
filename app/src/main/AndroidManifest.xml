@@ -32,7 +32,8 @@
                 android:resource="@xml/filepath" />
         </provider>
 
-        <activity android:name=".activity.RecyclerActivity"></activity>
+        <activity android:name=".activity.RecyclerActivity" />
+        <activity android:name=".activity.CymChadBaseRecyclerViewActivity"></activity>
     </application>
 
 </manifest>

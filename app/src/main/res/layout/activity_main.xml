@@ -15,4 +15,14 @@
         tools:layout_editor_absoluteY="0dp" />
 
 
+    <Button
+        android:id="@+id/CymChadBaseRecyclerView"
+        style="@style/ThemeOverlay.AppCompat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CymChadBaseRecyclerView"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+
 </LinearLayout>
