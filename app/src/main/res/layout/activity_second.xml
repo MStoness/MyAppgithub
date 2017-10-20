@@ -5,5 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.exueda.myapplication.activity.SecondActivity">
+    
+    
+    <Button
+        android:id="@+id/btn_post"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="postMessage"/>
 
 </android.support.constraint.ConstraintLayout>

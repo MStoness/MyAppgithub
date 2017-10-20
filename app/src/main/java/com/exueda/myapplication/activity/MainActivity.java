@@ -6,16 +6,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.exueda.myapplication.R;
+import com.exueda.myapplication.utils.MyEvent;
 
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private final String TAG = "MainActivity";
 
-    private Button simple_recyclerViewbtn,cymChadBaseRecyclerView;
+    private Button simple_recyclerViewbtn, cymChadBaseRecyclerView, eventBus;
+
+    private TextView showText;
 
     private Context context;
 
@@ -27,6 +34,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         findId();
 
+        EventBus.getDefault().register(this);
+
+
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        EventBus.getDefault().unregister(this);
+    }
+
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void getMessage(MyEvent myEvent) {
+
+        String message = myEvent.getMessage();
+
+        showText.setText(message);
 
     }
 
@@ -34,8 +60,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         simple_recyclerViewbtn = (Button) findViewById(R.id.simple_recyclerView);
         cymChadBaseRecyclerView = (Button) findViewById(R.id.CymChadBaseRecyclerView);
+        showText = (TextView) findViewById(R.id.showText);
+        eventBus = (Button) findViewById(R.id.eventBus);
         simple_recyclerViewbtn.setOnClickListener(this);
         cymChadBaseRecyclerView.setOnClickListener(this);
+        eventBus.setOnClickListener(this);
     }
 
 
@@ -56,6 +85,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 Intent intent2 = new Intent(context, CymChadBaseRecyclerViewActivity.class);
                 startActivity(intent2);
+
+
+                break;
+            case R.id.eventBus:
+
+                Intent intent3 = new Intent(context, SecondActivity.class);
+                startActivity(intent3);
 
 
                 break;

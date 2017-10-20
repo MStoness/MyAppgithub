@@ -20,9 +20,28 @@
         style="@style/ThemeOverlay.AppCompat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CymChadBaseRecyclerView"
+        android:text="CymChad第三方recyclerViewHelper"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/showText"
+        style="@style/ThemeOverlay.AppCompat"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="显示更新文字" />
+
+    <Button
+        android:id="@+id/eventBus"
+        style="@style/ThemeOverlay.AppCompat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="eventBus按钮"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+
 
 
 </LinearLayout>
