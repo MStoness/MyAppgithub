@@ -10,11 +10,12 @@ import com.exueda.myapplication.R;
 import com.exueda.myapplication.utils.MyEvent;
 
 import org.greenrobot.eventbus.EventBus;
-import org.greenrobot.eventbus.EventBusBuilder;
 
 public class SecondActivity extends Activity {
 
     private Button btn_post;
+
+    private String message;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +27,36 @@ public class SecondActivity extends Activity {
         btn_post.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EventBus.getDefault().post(new MyEvent("message"));
 
-                EventBusBuilder builder = EventBus.builder();
+                netWork();
+                finish();
+
             }
         });
+
+
+    }
+
+
+    private void netWork() {
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+
+                try {
+                    Thread.sleep(3000);//模拟耗时操作
+
+                    message = "hello";
+
+                    EventBus.getDefault().post(new MyEvent(message));
+
+
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+
     }
 }
