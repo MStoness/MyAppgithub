@@ -21,7 +21,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private final String TAG = "MainActivity";
 
-    private Button simple_recyclerViewbtn, cymChadBaseRecyclerView, eventBus;
+    private Button simple_recyclerViewbtn, cymChadBaseRecyclerView, eventBus,okhttp;
 
     private TextView showText;
 
@@ -59,10 +59,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         simple_recyclerViewbtn = (Button) findViewById(R.id.simple_recyclerView);
         cymChadBaseRecyclerView = (Button) findViewById(R.id.CymChadBaseRecyclerView);
         showText = (TextView) findViewById(R.id.showText);
+        okhttp = (Button) findViewById(R.id.okhttp);
         eventBus = (Button) findViewById(R.id.eventBus);
         simple_recyclerViewbtn.setOnClickListener(this);
         cymChadBaseRecyclerView.setOnClickListener(this);
         eventBus.setOnClickListener(this);
+        okhttp.setOnClickListener(this);
     }
 
 
@@ -90,6 +92,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
                 Intent intent3 = new Intent(context, SecondActivity.class);
                 startActivity(intent3);
+
+
+                break;
+            case R.id.okhttp:
+
+                Intent intent4 = new Intent(context, OkhttpActivity.class);
+                startActivity(intent4);
 
 
                 break;

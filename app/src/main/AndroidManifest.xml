@@ -33,7 +33,8 @@
         </provider>
 
         <activity android:name=".activity.RecyclerActivity" />
-        <activity android:name=".activity.CymChadBaseRecyclerViewActivity"></activity>
+        <activity android:name=".activity.CymChadBaseRecyclerViewActivity" />
+        <activity android:name=".activity.OkhttpActivity"></activity>
     </application>
 
 </manifest>

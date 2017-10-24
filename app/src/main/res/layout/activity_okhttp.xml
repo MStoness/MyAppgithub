@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.exueda.myapplication.activity.OkhttpActivity">
+
+
+
+    <Button
+        android:id="@+id/get"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="同步get" />
+
+    <Button
+        android:id="@+id/enqueue_get"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="异步get" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="显示string"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:maxLines="3"/>
+
+</LinearLayout>
