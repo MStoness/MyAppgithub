@@ -19,7 +19,7 @@ public class SecondActivity extends Activity {
 
 
 
-    private String aa2;
+    private String aa10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
