@@ -28,6 +28,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private Context context;
 
     private String ss;
+    
+    private String ssfromgithub;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
