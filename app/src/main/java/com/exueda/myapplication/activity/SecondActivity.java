@@ -17,6 +17,8 @@ public class SecondActivity extends Activity {
 
     private String message;
 
+    private String aa;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
