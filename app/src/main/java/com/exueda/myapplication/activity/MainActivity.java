@@ -26,6 +26,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private TextView showText;
 
     private Context context;
+    private Context context1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
